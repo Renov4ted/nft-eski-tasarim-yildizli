@@ -1,0 +1,195 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .brand-container {
+    .brand {
+      img {
+        height: 100%;
+      }
+    }
+    .toggle-container {
+      display: none;
+      .toggle {
+      }
+      .mode {
+      }
+    }
+  }
+  .links-container {
+    .links {
+      list-style-type: none;
+      justify-content: space-between;
+      gap: 4rem;
+      li {
+        .dark {
+          color: black;
+        }
+        .light {
+          color: yellow;
+        }
+        a {
+          color: var(--accent-color3);
+          text-decoration: none;
+        }
+        &:last-of-type {
+          a {
+            color: var(--pink);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+nav {
+  height: 50px;
+}
+@media only screen and (min-width: 180px) and (max-width: 1080px) {
+  .navItem{
+    margin-top: 20px;
+    margin-right: 20px;
+
+  }
+  nav{
+    margin-top: 20px;
+  }
+
+}
+    
+.navItem {
+  list-style-type: none;
+  margin-left: 12px;
+  padding: 10;
+  float: left;
+  text-align: center;
+ 
+}
+
+
+li a {
+  text-decoration: none;
+  display: block;
+}
+
+
+.navText{
+  font-size: 10;
+  
+}
+
+
+.neonText {
+  color: #fff;
+  text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #0fa,
+      0 0 82px #0fa,
+      0 0 92px #0fa,
+      0 0 102px #0fa,
+      0 0 151px #0fa;
+}
+
+
+/* Flickering animation */
+@keyframes flicker {
+    
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+      text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #0fa,
+      0 0 80px #0fa,
+      0 0 90px #0fa,
+      0 0 100px #0fa,
+      0 0 150px #0fa;
+  
+  }
+  
+  20%, 24%, 55% {        
+      text-shadow: none;
+  }    
+}
+
+
+
+
+// NAVBAR TASARİM
+
+#menu__toggle {
+  opacity: 0;
+}
+#menu__toggle:checked + .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked + .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+#menu__toggle:checked + .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  right: 0 !important;
+}
+.menu__btn {
+  position: fixed;
+  top: 20px;
+  width: 26px;
+  height: 26px;
+  right: 1px;
+  margin-top: 2px;
+  cursor: pointer;
+  z-index: 1;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #616161;
+  transition-duration: .25s;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+.menu__box {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: -100%; // ÖNEMLİ
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: peru;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+  transition-duration: .25s;
+}
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: .25s;
+}
+.menu__item:hover {
+  background-color: #CFD8DC;
+} 

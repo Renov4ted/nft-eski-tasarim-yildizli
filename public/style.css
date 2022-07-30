@@ -1,0 +1,48 @@
+/* Statik Baslangic*/
+@media (min-width:622px) {
+    .container {
+        max-width: 666px;
+    }
+
+    html{
+        font-size: 5px;
+    }
+    .col{
+        width: 50%;
+    }
+
+}
+
+@media (min-width:820px) {
+    .container {
+        max-width: 790px;
+    }
+    html{
+        font-size: 7px;
+    }
+    .col{
+        width: 50%;
+    }
+}
+
+@media (min-width:920px) {
+    .container {
+        max-width: 960px;
+    }
+    html{
+        font-size: 9px;
+    }
+    .col{
+        width: 33.33%;
+    }
+}
+
+@media (min-width:1441px) {
+    .container {
+        max-width: 2300px;
+    }
+    html{
+        font-size: 10px;
+    }
+}
+/* Statik Bitis*/
